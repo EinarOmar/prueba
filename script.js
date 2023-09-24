@@ -84,7 +84,7 @@ function validarFormulario() {
         from_name: nombre,
         phone: telefono,
         user_email: correo,
-        subject: tema,
+        subject: asunto,
         message: mensaje,
         to_email: "einaromar08@gmail.com" // Reemplaza con tu dirección de correo destino
     };
@@ -110,3 +110,44 @@ function validarFormulario() {
 
     return false; // Evita que el formulario se envíe de forma tradicional
 }
+// Obtén todos los testimonios y las flechas
+const testimonios = document.querySelectorAll('.testimonio');
+const flechaIzquierda = document.querySelector('.flecha-izquierda');
+const flechaDerecha = document.querySelector('.flecha-derecha');
+
+let currentIndex = 1; // Índice inicial del testimonio visible
+
+// Función para mostrar el testimonio actual
+function mostrarTestimonio() {
+    testimonios.forEach(testimonio => {
+        testimonio.style.display = 'none';
+    });
+
+    const testimonioActual = document.querySelector(`[data-index="${currentIndex}"]`);
+    testimonioActual.style.display = 'block';
+}
+
+// Función para mostrar el testimonio siguiente
+function testimonioSiguiente() {
+    currentIndex++;
+    if (currentIndex > testimonios.length) {
+        currentIndex = 1;
+    }
+    mostrarTestimonio();
+}
+
+// Función para mostrar el testimonio anterior
+function testimonioAnterior() {
+    currentIndex--;
+    if (currentIndex < 1) {
+        currentIndex = testimonios.length;
+    }
+    mostrarTestimonio();
+}
+
+// Manejadores de eventos para las flechas
+flechaIzquierda.addEventListener('click', testimonioAnterior);
+flechaDerecha.addEventListener('click', testimonioSiguiente);
+
+// Mostrar el testimonio inicial
+mostrarTestimonio();

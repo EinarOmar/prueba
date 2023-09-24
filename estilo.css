@@ -800,3 +800,63 @@ footer .arriba{
         transform: translateX(0);
     }
 }
+/* Estilos para el contenedor de testimonios */
+.testimonios-container {
+    background-color: #252A2E;
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Estilos para el contenedor que envuelve los testimonios */
+.testimonio-contenedor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #363232;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilos para la imagen del testimonio */
+.imagen-nombre img {
+    max-width: 100px; /* Ajusta el ancho máximo según tus preferencias */
+    height: auto;
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+}
+
+/* Flecha izquierda para testimonios anteriores */
+.flecha-izquierda {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Flecha derecha para testimonios siguientes */
+.flecha-derecha {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
