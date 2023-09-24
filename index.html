@@ -1,12 +1,516 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola mundo</title>
+    <link rel="icon" href="./img/hero.jpg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Hola mundo</h1>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Einar Omar</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.jpg" alt="">
+            </div>
+            <h1>Einar Omar Villegas Ruiz</h1>
+            <h2>Ingeniero en Desarrollo y Gestion de Software</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/EinarOmarVillegasRuiz/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/home"><i class="fa-brands fa-twitter"></i></a>
+                <!-- <a href="#"><i class="fa-brands fa-skype"></i></a> -->
+                <a href="https://www.instagram.com/einar_omar_ruizzz/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/einar-omar-villegas-ruiz-aa6459290/"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Einar Omar.</span> Me encantan los días lluviosos,
+                me gusta trabajar mediante retos, en equipo y crear código desde cero,
+                soy empático, responsable, trabajo en equipo, liderazgo, adaptable y proactivo.
+                </p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            29-05-2001
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            7712349566
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            einaromar08@gmail.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Huejutla de Reyes, Hidalgo
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Estudiante</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i <i class="fa-brands fa-python"></i></i>
+                            <span>PYTHON</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-react"></i>
+                            <span>REACT</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JAVASCRIPT</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-motorcycle"></i>
+                            <span>MOTOS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <a href="./doc/CV Einar Omar Villegas Ruiz.pdf" download>
+                <button>
+                    Descargar CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
+            </a>            
+        </div>
+    </section>
+
+ 
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>Javascript</span>
+                            <i class="fa-brands fa-js"></i> <!-- Icon for JavaScript -->
+                            
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="85%">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>Python</span>
+                            <i class="fa-brands fa-python"></i> <!-- Icon for Python -->
+                            
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="80%">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>Java</span>
+                            <i class="fab fa-java"></i> <!-- Icon for Java -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="75%">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>PHP</span>
+                            <i class="fab fa-php"></i> <!-- Icon for PHP -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="75%">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>C#</span>
+                            <i class="fab fa-cuttlefish"></i> <!-- Icon for C# -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="70%">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>C++</span>
+                            <i class="fab fa-cuttlefish"></i> <!-- Icon for C++ -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="65%">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>C</span>
+                            <i class="fab fa-cuttlefish"></i> <!-- Icon for C -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="60%">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>HTML & CSS</span>
+                            <i class="fab fa-css3"></i> <!-- Icon for HTML & CSS -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="60%">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>Trabajo en equipo</span>
+                            <i class="fas fa-users"></i> <!-- Icon for Teamwork -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="100%">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>Adaptable</span>
+                            <i class="fas fa-user-check"></i> <!-- Icon for Adaptable -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="90%">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>Empatico</span>
+                            <i class="fas fa-heart"></i> <!-- Icon for Empatico -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="90%">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>Liderazgo</span>
+                            <i class="fas fa-chalkboard-teacher"></i> <!-- Icon for Liderazgo -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="95%">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>Comunicacion</span>
+                            <i class="fas fa-comments"></i> <!-- Icon for Comunicacion -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="90%">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon-text">
+                            <span>Dedicación</span>
+                            <i class="fas fa-hourglass-half"></i> <!-- Icon for Dedicacion -->
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso" data-porcentaje="90%">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Herramientas -->
+            </div>
+            <h2>Herramientas</h2>
+            <div class="carousel-container">
+               
+                <div class="carousel">
+                    <div class="item">
+                        <img src="./img/react.png" alt="React.js">
+                        <p>React.js</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/react.png" alt="React Native">
+                        <p>React Native</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/codeigniter.png" alt="Codeigniter">
+                        <p>Codeigniter</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/firebase.png" alt="Firebase">
+                        <p>Firebase</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/mysql.png" alt="MySQL">
+                        <p>MySQL</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/mongodb.png" alt="Mongo DB">
+                        <p>Mongo DB</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/git.png" alt="Git">
+                        <p>Git</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/git.png" alt="GitHub">
+                        <p>GitHub</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/sourcetree.png" alt="Sourcetree">
+                        <p>Sourcetree</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/notion.png" alt="Notion">
+                        <p>Notion</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/jira.png" alt="Jira">
+                        <p>Jira</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Flavor Alley</h4>
+                        <span class="casa">Universidad Tecnología la Huasteca Hidalguense</span>
+                        <span class="fecha">2021-2022</span>
+                        <p>Desarrollo de un sistema web (CodeIgniter) y una aplicación
+                            móvil (React Native) para productos de plantas y dispositivos IoT
+                            de riego automático.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Corazón Huasteco</h4>
+                        <span class="casa">Universidad Tecnología la Huasteca Hidalguense </span>
+                        <span class="fecha">2022-2023</span>
+                        <p>Este proyecto tuvo como objetivo difundir y preservar la cultura
+                            de Huejutla de Reyes, Hidalgo, a través de un sitio web en
+                            React.js respaldado por Firebase. Además, incluyó una
+                            aplicación móvil en React Native, un juego en Unity, una skill de
+                            Alexa, un chatbot y un modelo de Machine Learning para
+                            predicciones culturales y de mercado. Su propósito fue apoyar a
+                            los comerciantes locales y compartir la riqueza cultural de
+                            Huejutla de Reyes de manera innovadora, todo esto utilizando la
+                            metodología XP
+                            </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Horarios Computo Evolutivo</h4>
+                        <span class="casa">Universidad Tecnología la Huasteca Hidalguense</span>
+                        <span class="fecha">Enero-Abril 2022</span>
+                        <p>Contribuyó a la conversión de un programa de creación de
+                            horarios de C# a Python para la UTHH, implementando
+                            algoritmos evolutivos y agregando funciones de visualización en
+                            tiempo real. También desarrolló una aplicación de escritorio para
+                            la descarga de archivos de Excel según los criterios de docentes,
+                            grupos y cuatrimestres específicos.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <a href="https://corazon-huasteco.com/">
+                        <img src="img/p1.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Corazon Husteco</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="proyecto">
+                    <a href="https://fashion-fusion-65eb8.web.app/inicio">
+                        <img src="img/p2.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Fashion fusion</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="proyecto">
+                    <a href="file:///C:/Users/Omar%20E/Desktop/ejmplo/index.html#inicio">
+                        <img src="img/p3.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Mi Portafolio</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <form method="post" onsubmit="return validarFormulario()">
+                        <input type="text" id="nombre" name="nombre" placeholder="Tú Nombre">
+                        <input type="text" id="telefono" name="telefono" placeholder="Número telefónico">
+                        <input type="text" id="correo" name="correo" placeholder="Dirección de correo">
+                        <input type="text" id="tema" name="tema" placeholder="Tema">
+                        <textarea id="mensaje" name="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        <button type="submit">
+                            Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </form>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="./img/ubicacion.jpg" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Huejutla de Reyes, Hidalgo
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llamanos: 7712349566
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: einaromar08@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/EinarOmarVillegasRuiz/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/home"><i class="fa-brands fa-twitter"></i></a>
+            <!-- <a href="#"><i class="fa-brands fa-skype"></i></a> -->
+            <a href="https://www.instagram.com/einar_omar_ruizzz/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/einar-omar-villegas-ruiz-aa6459290/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
