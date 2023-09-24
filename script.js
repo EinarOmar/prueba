@@ -84,7 +84,7 @@ function validarFormulario() {
         from_name: nombre,
         phone: telefono,
         user_email: correo,
-        subject: asunto,
+        subject: tema,
         message: mensaje,
         to_email: "einaromar08@gmail.com" // Reemplaza con tu dirección de correo destino
     };
@@ -110,6 +110,7 @@ function validarFormulario() {
 
     return false; // Evita que el formulario se envíe de forma tradicional
 }
+
 // Obtén todos los testimonios y las flechas
 const testimonios = document.querySelectorAll('.testimonio');
 const flechaIzquierda = document.querySelector('.flecha-izquierda');
