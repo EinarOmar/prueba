@@ -808,6 +808,15 @@ footer .arriba{
     text-align: center;
 }
 
+/* Estilos para el título h2 dentro del contenedor de testimonios */
+.testimonios-container h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    color: #fff; /* Cambiar el color a blanco */
+    text-align: center;
+    padding: 20px 0;
+}
+
 /* Estilos para el contenedor que envuelve los testimonios */
 .testimonio-contenedor {
     position: relative;
@@ -821,6 +830,16 @@ footer .arriba{
     border-radius: 10px;
 }
 
+/* Estilos para el título h2 dentro del contenedor de testimonios */
+.testimonios-container h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    color: #fff; /* Cambiar el color a blanco */
+    text-align: center;
+    padding: 20px 0;
+}
+
+
 .item a {
     text-decoration: none; /* Para eliminar el subrayado de los enlaces */
     color: white; /* Color de texto blanco */
@@ -832,6 +851,7 @@ footer .arriba{
     height: auto;
     border-radius: 50%; /* Hace que la imagen sea redonda */
 }
+
 /* Flecha izquierda para testimonios anteriores */
 .flecha-izquierda {
     background-color: #333;
