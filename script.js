@@ -81,22 +81,31 @@ function validarFormulario() {
 
     // Configura los parámetros para enviar el correo utilizando EmailJS
     var templateParams = {
-        to_name: nombre,
+        from_name: nombre,
         phone: telefono,
         user_email: correo,
-        asunto: tema, // Utiliza el valor del campo "Tema" del formulario como asunto del correo
+        subject: tema,
         message: mensaje,
         to_email: "einaromar08@gmail.com" // Reemplaza con tu dirección de correo destino
     };
-    
 
     // Envía el correo utilizando EmailJS
     emailjs.send("service_vfy3y5h", "template_re1m3ei", templateParams, "4ZZw_2xZzhiSMoCKI")
         .then(function(response) {
             console.log("Correo enviado con éxito:", response);
-            // Puedes redirigir a una página de confirmación o realizar otras acciones aquí.
+
+            // Limpia el formulario
+            document.getElementById("nombre").value = "";
+            document.getElementById("telefono").value = "";
+            document.getElementById("correo").value = "";
+            document.getElementById("tema").value = "";
+            document.getElementById("mensaje").value = "";
+
+            alert("Correo enviado con éxito. El formulario ha sido limpiado.");
+
         }, function(error) {
             console.error("Error al enviar el correo:", error);
+            alert("Hubo un error al enviar el correo. Por favor, inténtalo de nuevo más tarde.");
         });
 
     return false; // Evita que el formulario se envíe de forma tradicional
