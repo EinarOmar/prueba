@@ -98,7 +98,7 @@ function validarFormulario() {
             document.getElementById("nombre").value = "";
             document.getElementById("telefono").value = "";
             document.getElementById("correo").value = "";
-            var tema = document.getElementById("tema").value;
+            tema = document.getElementById("tema").value;
             document.getElementById("mensaje").value = "";
 
             alert("Correo enviado con éxito. El formulario ha sido limpiado.");
